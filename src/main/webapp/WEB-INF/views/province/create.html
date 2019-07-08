@@ -4,14 +4,71 @@
     <meta charset="UTF-8">
     <title>Create province</title>
 </head>
+<style>
+
+    footer {
+        text-align: right;
+    }
+
+    #form {
+        width: 500px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    button {
+        width: 150px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    button:hover {
+        background-color: darkorange;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 12px 0;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    input[type=submit]:hover {
+        background-color: darkorange;
+    }
+
+</style>
 <body>
 <h1>Create province</h1>
 <p>
-    <a href="/provinces">Province list</a>
+    <a href="/provinces"><button>Province list</button></a>
 </p>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
+<div id="form">
 <form th:action="@{/create-province}" th:object="${province}" method="post">
     <table>
         <tr>
@@ -24,5 +81,8 @@
         </tr>
     </table>
 </form>
+</div>
+<footer> &copy; 2019 Jason Nguyen</footer>
+
 </body>
 </html>

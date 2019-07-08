@@ -27,7 +27,7 @@ public class CustomerController {
         return provinceService.findAll();
     }
 
-    @GetMapping("/customers")
+    @GetMapping("/")
     public ModelAndView listCustomers(){
         Iterable<Customer> customers = customerService.findAll();
 
@@ -91,6 +91,6 @@ public class CustomerController {
     @PostMapping("/delete-customer")
     public String deleteCustomer(@ModelAttribute("customer") Customer customer){
         customerService.remove(customer.getId());
-        return "redirect:customers";
+        return "redirect:/";
     }
 }
