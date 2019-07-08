@@ -55,6 +55,7 @@
     <tr>
         <th>First name</th>
         <th>Last name</th>
+        <th>Province</th>
         <th style="text-align: center">Edit</th>
         <th style="text-align: center">Delete</th>
     </tr>
@@ -62,6 +63,7 @@
         <tr>
             <td th:text="${customer.firstName}"></td>
             <td th:text="${customer.lastName}"></td>
+            <td th:text="${customer.province.name}"></td>
             <td style="text-align: center"><a th:href="@{/edit-customer/__${customer.id}__ }">Edit</a></td>
             <td style="text-align: center"><a th:href="@{/delete-customer/__${customer.id}__ }">Delete</a></td>
         </tr>
